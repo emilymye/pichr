@@ -1,0 +1,38 @@
+[
+    {
+        "model": "pichr.Procedure",
+        "fields" : {
+            "name": "Excision of osteophyte",
+            "sctid": 239454000
+        }
+    },
+    {
+        "model": "pichr.Procedure",
+        "fields" : {
+            "name": "Recommendation to rest",
+            "sctid": 183051005
+        }
+    },
+    {
+        "model": "pichr.Procedure",
+        "fields" : {
+            "name": "Repair of flexor tendon forearm, wrist, hand",
+            "sctid": 281761002
+        }
+    },
+    {
+        "model": "pichr.Procedure",
+        "fields" : {
+            "name": "Reconstruction of medial collateral ligament of elbow using tendon graft",
+            "sctid": 439632006,
+            "procedure_site": 113244004
+        }
+    },
+    {
+        "model": "pichr.Procedure",
+        "fields" : {
+            "name": "Referral for minor surgery",
+            "sctid": 415260000
+        }
+    }
+]

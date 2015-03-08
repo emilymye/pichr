@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+{% for error in form.errors %}
+  <span class="help-inline">{{ error }}</span>
+{% endfor %}
+
+<div id="results" class="units-container results-container">
+  <div class="units-row unit-80 unit-centered units-split">
+    <div class="unit-100 lead">
+      <h2>Results</h2>
+      <p>{{ results.summary }}
+    </div>
+    <div class="unit-50">
+      <h3>Injuries</h3>
+      {% for inj in results.injuries %}
+        <div class="units-30">
+          {{ inj.player.name }}
+        </div>
+          {{ inj.recovery.duration }}
+          {{ inj.recovery.reinjury }}
+          {{ inj.recovery.offseason }}
+          {{ inj.name }}
+      {% endfor%}
+    </div>
+    <div class="unit-50">
+      <h3>Graphs</h3>
+      <div class="units-row end">
+        <div id="graph_era" class="graph"></div>
+      <div class="units-row end">
+        <div id="graph_fastball" class="graph"></div>
+      </div>
+    </div>
+</div>
+
+
+{% block javascript %}
+  <script>
+    $(function(){
+      var erapts = {{ results.era_pts }};
+      var fastballpts = {{ results.fastball_pts }}
+
+
+      $.plot($("#graph_era"), erapts, options);
+      $.plot($("#graph_fastball"), erapts, options);
+    });
+  </script>
+
+{% endblock %}
+
+{% endblock %}

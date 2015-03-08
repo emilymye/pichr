@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+
+  <div class="units-container search-container">
+    <div class="units-row">
+      <div class="unit-80 unit-centered">
+        <div class="search-title">
+          <div class="lead">
+            <h1>PICHR</h1>
+            <h4 style="font-weight:300">Analysis of MLB Injuries and Recovery</h4>
+          </div>
+        </div>
+    </div>
+    <div class="units-row">
+      <div class="unit-60 unit-centered">
+        <div class="filters">
+          <form action="/search/" method="post" class="forms search-form">
+            {% csrf_token %}
+            <div class="units-row">
+              <div class="unit-30">
+                <label>Injury Type</label>
+                {{ form.injury_type }}
+              </div>
+            
+              <div class="unit-70">
+                <label>Affected Area </label>
+                {{ form.location }}
+              </div>
+            </div>
+            <div class="unit-60 unit-centered">
+              <button class="btn btn-blue width-100">Search Injuries</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+{% endblock %}
+
+
+
+{% block javascript %}
+  <script src="{{ STATIC_URL }}/js/search.js" type="text/javascript"></script>
+{% endblock %}

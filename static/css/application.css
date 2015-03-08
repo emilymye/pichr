@@ -1,0 +1,30 @@
+.search-container{
+  margin-top:100px;
+  height:400px;
+}
+
+.search-container .search-title{
+  margin:10px;
+  text-align: center;
+}
+
+.search-form .btn{
+  margin-top:10px;
+}
+
+.search-form select{
+  width:100%;
+}
+
+#content{
+  min-height:400px;
+}
+
+.results-container{
+  margin-top:40px;
+}
+
+.graph{
+  width:300px;
+  height:200px;
+}
