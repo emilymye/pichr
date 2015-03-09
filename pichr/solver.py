@@ -23,7 +23,7 @@ def analyze(injuries, qtext):
     histogram = np.histogram(days, bins=4)
 
     summary += "Recovery times ranged from %d to %d days, with an average of %.1f days." % (
-        min(days), max(days), days.mean()
+        days.min(), days.max(), days.mean()
     )
 
     return { 

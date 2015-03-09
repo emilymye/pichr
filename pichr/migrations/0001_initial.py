@@ -14,32 +14,6 @@ class Migration(migrations.Migration):
             name='Injury',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('name', models.CharField(max_length=200)),
-                ('sctid', models.IntegerField(default=-1)),
-            ],
-            options={
-            },
-            bases=(models.Model,),
-        ),
-        migrations.CreateModel(
-            name='InjuryLocation',
-            fields=[
-                ('name', models.CharField(max_length=100)),
-                ('sctname', models.CharField(max_length=200)),
-                ('sctid', models.IntegerField(serialize=False, primary_key=True)),
-                ('root', models.BooleanField(default=False)),
-                ('children', models.ManyToManyField(related_name='parents', to='pichr.InjuryLocation')),
-                ('descendants', models.ManyToManyField(related_name='ancestors', to='pichr.InjuryLocation')),
-            ],
-            options={
-            },
-            bases=(models.Model,),
-        ),
-        migrations.CreateModel(
-            name='InjuryType',
-            fields=[
-                ('name', models.CharField(max_length=100)),
-                ('sctid', models.IntegerField(serialize=False, primary_key=True)),
             ],
             options={
             },
@@ -57,18 +31,7 @@ class Migration(migrations.Migration):
             bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='Procedure',
-            fields=[
-                ('name', models.CharField(max_length=100)),
-                ('sctid', models.IntegerField(serialize=False, primary_key=True)),
-                ('procedure_site', models.ForeignKey(to='pichr.InjuryLocation', null=True)),
-            ],
-            options={
-            },
-            bases=(models.Model,),
-        ),
-        migrations.CreateModel(
-            name='RecoveryStatistic',
+            name='Recovery',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('date', models.DateField()),
@@ -79,22 +42,68 @@ class Migration(migrations.Migration):
                 ('postFastball', models.FloatField()),
                 ('reinjury', models.BooleanField(default=False)),
                 ('offseason', models.BooleanField(default=False)),
-                ('procedure', models.ForeignKey(to='pichr.Procedure', null=True)),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='SCTBodyStructure',
+            fields=[
+                ('name', models.CharField(max_length=100)),
+                ('sctname', models.CharField(max_length=200)),
+                ('sctid', models.IntegerField(serialize=False, primary_key=True)),
+                ('root', models.BooleanField(default=False)),
+                ('children', models.ManyToManyField(related_name='parents', to='pichr.SCTBodyStructure')),
+                ('descendants', models.ManyToManyField(related_name='ancestors', to='pichr.SCTBodyStructure')),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='SCTInjury',
+            fields=[
+                ('sctid', models.IntegerField(serialize=False, primary_key=True)),
+                ('name', models.CharField(max_length=100)),
+                ('finding_site', models.ForeignKey(to='pichr.SCTBodyStructure')),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='SCTMorphology',
+            fields=[
+                ('name', models.CharField(max_length=100)),
+                ('sctid', models.IntegerField(serialize=False, primary_key=True)),
+                ('general', models.BooleanField(default=False)),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='SCTProcedure',
+            fields=[
+                ('name', models.CharField(max_length=100)),
+                ('sctid', models.IntegerField(serialize=False, primary_key=True)),
+                ('procedure_site', models.ForeignKey(to='pichr.SCTBodyStructure', null=True)),
             ],
             options={
             },
             bases=(models.Model,),
         ),
         migrations.AddField(
-            model_name='injury',
-            name='injury_location',
-            field=models.ForeignKey(to='pichr.InjuryLocation'),
+            model_name='sctinjury',
+            name='morphology',
+            field=models.ForeignKey(to='pichr.SCTMorphology'),
             preserve_default=True,
         ),
         migrations.AddField(
-            model_name='injury',
-            name='injury_type',
-            field=models.ForeignKey(to='pichr.InjuryType'),
+            model_name='recovery',
+            name='procedure',
+            field=models.ForeignKey(to='pichr.SCTProcedure', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -106,7 +115,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='injury',
             name='recovery',
-            field=models.OneToOneField(to='pichr.RecoveryStatistic'),
+            field=models.OneToOneField(to='pichr.Recovery'),
+            preserve_default=True,
+        ),
+        migrations.AddField(
+            model_name='injury',
+            name='sct_injury',
+            field=models.ForeignKey(to='pichr.SCTInjury'),
             preserve_default=True,
         ),
     ]

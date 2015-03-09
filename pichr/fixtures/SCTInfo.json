@@ -1,0 +1,630 @@
+[
+  {
+      "model": "pichr.SCTMorphology",
+      "pk": 0,
+      "fields" : {
+          "name": "General",
+          "sctid": 19130008,
+          "general": "True"
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "fields" : {
+          "name": "Dislocation",
+          "sctid": 87642003
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "fields" : {
+          "name": "Fracture",
+          "sctid": 72704001
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "fields" : {
+          "name": "Inflammation",
+          "sctid": 23583003
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "fields" : {
+          "name": "Rupture/Tear",
+          "sctid": 125671007
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "fields" : {
+          "name": "Strain",
+          "sctid": 308497004
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "fields" : {
+          "name": "Sprain",
+          "sctid": 384709000
+      }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Forearm, muscle",
+      "sctname": "Structure of muscle of forearm",
+      "sctid": 423313009,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Forearm, radius and/or ulna",
+      "sctname": "Bone structure of radius and/or ulna",
+      "sctid": 299701004,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Forearm, radial nerve",
+      "sctname": "Radial nerve in forearm",
+      "sctid": 181024002,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Forearm region",
+      "sctname": "Forearm structure",
+      "sctid": 14975008,
+      "children": [423313009, 299701004, 181024002],
+      "descendants": [423313009, 299701004, 181024002],
+      "root": "True"
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Elbow region",
+      "sctname": "Elbow region",
+      "sctid": 127949000,
+      "children": [304678002, 303558007, 25612009, 16953009],
+      "descendants": [304678002, 303558007, 25612009, 16953009, 305016004, 87218006, 113244004],
+      "root": "True"
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Elbow, bone structure",
+      "sctname": "Bone structure of elbow",
+      "sctid": 304678002,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Elbow, muscle acting on joint",
+      "sctname": "Muscle acting on elbow joint",
+      "sctid": 303558007,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Elbow, tendon and tendon sheath",
+      "sctname": "Tendon and tendon sheath of elbow",
+      "sctid": 25612009,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Elbow, collateral ulnar ligament (UCL)",
+      "sctname": "Collateral ulnar ligament of elbow",
+      "sctid": 113244004,
+      "descendants": [],
+      "children": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Elbow, ligaments in joint",
+      "sctname": "Ligament of elbow joint",
+      "sctid": 87218006,
+      "children": [113244004],
+      "descendants": [113244004]
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields":{
+      "name": "Elbow, periarticular bone structure",
+      "sctname": "Periarticular bone structure of elbow joint",
+      "sctid": 305016004,
+      "descendants": [],
+      "children": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields":{
+      "name": "Elbow, joint",
+      "sctname": "Elbow joint",
+      "sctid": 16953009,
+      "children": [305016004, 87218006],
+      "descendants": [305016004, 87218006, 113244004]
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields":{
+      "name": "Shoulder, synovial structure",
+      "sctname": "Synovial structure of shoulder region",
+      "sctid": 312678005,
+      "children": [424857008],
+      "descendants": [424857008]
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Shoulder, bursa",
+      "sctname": "Bursa of shoulder",
+      "sctid": 424857008,
+      "children": [],
+      "descendants": []
+    }
+  },
+    {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Triceps brachii, muscle",
+      "sctname": "Triceps brachii muscle structure",
+      "sctid": 40284004,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Triceps brachii, tendon",
+      "sctname": "Triceps tendon",
+      "sctid": 22525001,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Triceps brachii, muscle and/or tendon",
+      "sctname": "Triceps brachii muscle and/or tendon",
+      "sctid": 699996001,
+      "children": [40284004, 22525001],
+      "descendants": [40284004, 22525001]
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Biceps brachii, tendon of long head",
+      "sctname": "Tendon of long head of biceps brachii",
+      "sctid": 245102005,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields":{
+      "name": "Biceps brachii, muscle and/or tendon",
+      "sctname": "Biceps brachii muscle and/or tendon structure",
+      "sctid": 699956003,
+      "children": [245102005],
+      "descendants": [245102005]
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Shoulder and/or upper arm",
+      "sctname": "Structure of shoulder and/or upper arm",
+      "sctid": 420657004,
+      "children": [16982005, 699956003, 699996001],
+      "descendants": [16982005, 699956003, 699996001, 312678005, 424857008, 426821001, 245100002, 245102005, 40284004, 22525001],
+      "root": "True"
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Shoulder, tendon and tendon sheath",
+      "sctname": "Tendon and tendon sheath of shoulder",
+      "sctid": 57039004,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Shoulder region",
+      "sctname": "Shoulder region",
+      "sctid": 16982005,
+      "children": [312678005, 7885001, 57039004],
+      "descendants": [312678005, 424857008, 7885001, 245100002, 57039004]
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Shoulder, rotator cuff",
+      "sctname": "Rotator cuff",
+      "sctid": 7885001,
+      "children": [245100002],
+      "descendants": [245100002]
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Shoulder, rotator cuff tendon",
+      "sctname": "Tendon of rotator cuff of shoulder",
+      "sctid": 245100002,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Shoulder, joint structure",
+      "sctname": "Joint structure of shoulder region",
+      "sctid": 31398001,
+      "children": [85537004],
+      "descendants": [85537004, 86721001, 50024002, 86721001, 50024002]
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Shoulder, glenohumeral joint",
+      "sctname": "Glenohumeral joint structure",
+      "sctid": 85537004,
+      "children": [86721001, 50024002],
+      "descendants": [86721001, 50024002]
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields":{
+      "name": "Shoulder, labrum glenoidale",
+      "sctname": "Labrum glenoidale",
+      "sctid": 86721001,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+    "model": "pichr.SCTBodyStructure",
+    "fields": {
+      "name": "Shoulder, joint ligament",
+      "sctname": "Ligament of shoulder joint",
+      "sctid": 50024002,
+      "children": [],
+      "descendants": []
+    }
+  },
+  {
+      "model": "pichr.SCTProcedure",
+      "fields" : {
+          "name": "Excision of osteophyte",
+          "sctid": 239454000
+      }
+  },
+  {
+      "model": "pichr.SCTProcedure",
+      "fields" : {
+          "name": "Recommendation to rest",
+          "sctid": 183051005
+      }
+  },
+  {
+      "model": "pichr.SCTProcedure",
+      "fields" : {
+          "name": "Repair of flexor tendon forearm, wrist, hand",
+          "sctid": 281761002
+      }
+  },
+  {
+      "model": "pichr.SCTProcedure",
+      "fields" : {
+          "name": "Reconstruction of medial collateral ligament of elbow using tendon graft",
+          "sctid": 439632006,
+          "procedure_site": 113244004
+      }
+  },
+  {
+      "model": "pichr.SCTProcedure",
+      "fields" : {
+          "name": "Referral for minor surgery",
+          "sctid": 415260000
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "pk": 0,
+      "fields" : {
+          "name": "General",
+          "sctid": 19130008,
+          "general": "True"
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "fields" : {
+          "name": "Dislocation",
+          "sctid": 87642003
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "fields" : {
+          "name": "Fracture",
+          "sctid": 72704001
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "fields" : {
+          "name": "Inflammation",
+          "sctid": 23583003
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "fields" : {
+          "name": "Rupture/Tear",
+          "sctid": 125671007
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "fields" : {
+          "name": "Strain",
+          "sctid": 308497004
+      }
+  },
+  {
+      "model": "pichr.SCTMorphology",
+      "fields" : {
+          "name": "Sprain",
+          "sctid": 384709000
+      }
+  },
+  {
+    "fields": {
+      "morphology": 19130008,
+      "finding_site": 181024002,
+      "sctid": 609590004,
+      "name": "Radial nerve entrapment"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 19130008,
+          "finding_site": 14975008,
+          "sctid": 125597008,
+          "name": "Injury of forearm"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 23583003,
+          "finding_site": 25612009,
+          "sctid": 331000119106,
+          "name": "Tendinitis of elbow or forearm"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 308497004,
+          "finding_site": 423313009,
+          "sctid": 442265005,
+          "name": "Strain of muscle and/or tendon of forearm"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 19130008,
+          "finding_site": 16982005,
+          "sctid": 125594001,
+          "name": "Injury of shoulder region"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 23583003,
+          "finding_site": 424857008,
+          "sctid": 239961006,
+          "name": "Bursitis of shoulder"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 308497004,
+          "finding_site": 16982005,
+          "sctid": 275334004,
+          "name": "Shoulder strain"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 23583003,
+          "finding_site": 31398001,
+          "sctid": 443798008,
+          "name": "Inflammation of joint of shoulder region"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 19130008,
+          "finding_site": 86721001,
+          "sctid": 263122000,
+          "name": "Injury of glenoid labrum of shoulder joint"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 23583003,
+          "finding_site": 57039004,
+          "sctid": 202852009,
+          "name": "Shoulder tendinitis"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 87642003,
+          "finding_site": 85537004,
+          "sctid": 269105005,
+          "name": "Dislocation or subluxation of shoulder"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 125671007,
+          "finding_site": 245100002,
+          "sctid": 4106009,
+          "name": "Rotator cuff tear"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 125671007,
+          "finding_site": 245100002,
+          "sctid": 202842005,
+          "name": "Partial thickness rotator cuff tear"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 308497004,
+          "finding_site": 245100002,
+          "sctid": 74779009,
+          "name": "Strain of rotator cuff capsule"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 23583003,
+          "finding_site": 22525001,
+          "sctid": 202857003,
+          "name": "Triceps tendinitis"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 308497004,
+          "finding_site": 40284004,
+          "sctid": 428539005,
+          "name": "Strain of triceps brachii muscle"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 23583003,
+          "finding_site": 245102005,
+          "sctid": 202856007,
+          "name": "Biceps tendinitis"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 19130008,
+          "finding_site": 127949000,
+          "sctid": 125596004,
+          "name": "Injury of elbow"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 308497004,
+          "finding_site": 303558007,
+          "sctid": 442130003,
+          "name": "Strain of muscle and/or tendon of elbow region"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 125671007,
+          "finding_site": 113244004,
+          "sctid": 209581003,
+          "name": "Complete tear, elbow joint, medial collateral ligament"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 384709000,
+          "finding_site": 113244004,
+          "sctid": 209429001,
+          "name": "Sprain, elbow joint, medial collateral ligament"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 72704001,
+          "finding_site": 305016004,
+          "sctid": 309464009,
+          "name": "Elbow fracture"
+      },
+      "model": "pichr.SCTInjury"
+  },
+  {
+      "fields": {
+          "morphology": 23583003,
+          "finding_site": 16953009,
+          "sctid": 298163003,
+          "name": "Elbow joint inflamed"
+      },
+      "model": "pichr.SCTInjury"
+  }
+]
