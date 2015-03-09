@@ -16,10 +16,9 @@ def search(request):
         form = SearchForm(request.POST)
 
         if form.is_valid():
-
             filters = form.cleaned_data
-            injuries = []
 
+            injuries = []
             query = ""
             
             if filters["injury"] is not None:
@@ -29,28 +28,24 @@ def search(request):
             else:
                 type_f = [o.pk for o in SCTMorphology.objects.all()]
                 loc_f = [l.pk for l in SCTBodyStructure.objects.all()]
-
                 query = "general injury"
-
                 if filters["injury_type"] is not None and \
                    filters["injury_type"].sctid != 19130008:
                     tpe = filters["injury_type"]
                     type_f = [tpe.sctid]
                     query = "%s" % tpe.name.lower()
-
                 if filters["location"] is not None:
                     loc = filters["location"]
                     query += " of %s" % loc.sctname.lower()
                     loc_f = [desc['sctid'] for desc in loc.descendants.all().values("sctid").distinct()]
                     loc_f.append(loc.sctid)
-
                 injuries = list(Recovery.objects.filter(
                     sct_injury__finding_site__sctid__in=loc_f,
                     sct_injury__morphology__sctid__in=type_f
                 ))
 
             payload["query_injury"] = query.lower()
-            payload["results"] = analyze(injuries, query)
+            payload["results"] = analyze(injuries)
 
             return render(request, "results.html", payload)
         

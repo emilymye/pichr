@@ -84,10 +84,16 @@ class Recovery(models.Model):
 
     def labels(self):
         label, weight = 0, 2
-        if self.postERA - self.preERA < self.RANK_CUTOFFS["era"]:
+        diffERA, diffFast = self.diffERA(), self.diffFastball()
+
+        if diffERA < self.RANK_CUTOFFS["era"]:
             weight+=1
-        if self.postFastball - self.preFastball > self.RANK_CUTOFFS["era"]:
+        elif diffERA > self.RANK_CUTOFFS["era"]:
+            weight -= 0.5
+        if diffFast > self.RANK_CUTOFFS["fastball"]:
             weight+=1
+        elif diffFast < self.RANK_CUTOFFS["fastball"]:
+            weight -= 0.5
 
         if self.reinjury:
             label = 1

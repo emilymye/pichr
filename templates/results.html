@@ -3,117 +3,157 @@
 {% block content %}
 
 <div id="results" class="units-container results-container">
-{% if not results.injuries %}
-    <div class="units-row unit-centered unit-80"  style="padding:20px 0">
+
+{% if not results %}
+
+<div class="unit-centered unit-80">
+    <div class="units-row" style="padding:10px 20px">
         <div class="results-lead lead">
             <h3>Results</h3>
-            <h4 style="font-weight:300">"{{ query_injury }}"</h4>
+            <p style="font-weight:300">No injuries of type "{{ query_injury }}" are in our dataset - sorry! You may have choosen a type of injury that cannot occur at this body part.</p>
         </div>
-        <div>
-            <p>No injuries of this type are in our dataset - sorry!</p>
-            <a href="/search" class="btn btn-blue unit-40 unit-centered">New Search</a>
-        </div>
-        
+        <a href="/search" class="btn btn-blue unit-40 unit-centered">New Search</a>
     </div>
-{% else %}
-    <div class="units-row">
-        <div class="units-row unit-80 unit-centered results-lead lead">
-            <h3>Results</h3>
-            <h4 style="font-weight:300">We found {{ results.totalcnt }} cases matching "{{ query_injury }}".</h4>
-        </div>
-        <div class="units-row unit-80 results-section unit-centered">
-            <p>
-                {% if results.cnt %}
-                    {{ results.cnt }} were <span class="green">mid-season recoveries with no injuries</span>, averaging around {{ results.mean }} days of recovery with a standard deviation of  {{ results.variance }}.
-                {% endif %}
-
-                {% if results.cntOff %}
-                    {{results.cntOff}} were off-season recoveries with no injuries, averaging around {{ results.meanOff }} days of recovery with a standard deviation of {{ results.varianceOff }}.
-                {% endif %}
-
-                {% if results.cntRe %}
-                    {{ results.cntReTotal }} cases had re-injuries, {{results.cntRe }} of which were mid-season recoveries. 
-                {% else %}
-                {% endif %}   
-            </p>
-            <p>
-                We suggest that the recovery period should have a general recovery length of <span class="blue">{{ results.min }} to {{results.max}} days</span>.<br/><br/>
-            </p>
-
-        </div>
-
-
-        <div class="units-row unit-80 results-section unit-centered units-split">
-            <div class="unit-row">
-                <div class="figure unit-50">
-                    <div id="graph_era" class="graph"></div>
-                    <div class="unit-80 unit-centered">
-                        <small><i>
-                        Earned mean average (ERA) - the average number of earned runs given up by a pitcher per game. Lower (negative) values are better.
-                         </i></small>
-                    </div>
-                </div>
-                <div class="figure unit-50">
-                    <div id="graph_fastball" class="graph"></div>
-                    <div class="unit-80 unit-centered">
-                        <small><i>
-                        Fastball velocity - higher is better. Fastball and ERA are from http://www.fangraphs.com.
-                         </i></small>
-                    </div>
-                </div>
-            </div>
-            <div class="unit-row">
-                <div class="unit-40 unit-centered" style="padding:10px 0 20px">
-                    <button id="figure-btn" class="width-100 btn btn-blue btn-outline">
-                        Show only mid-season points
-                    </button>
-                </div>
-            </div>
-        </div>
-
-    <div class="unit-row unit-80 unit-centered results-section injuries-list">
-        <h3>Excellent Recovery Cases</h3>
-        <div class="unit-100">
-        <table class="injury-table table-stripped">
-            <thead>
-                <tr>
-                    <th>Player Name</th>
-                    <th>Team</th>
-                    <th>Injury</th>
-                    <th>Affected Area</th>
-                    <th>Days</th>
-                    <th>ERA</th>
-                    <th>Fastball</th>
-                    <th>Off-season</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for injObj in results.injuries %}
-                <tr>
-                    <td>{{ injObj.playerName }}</td>
-                    <td>{{ injObj.playerTeam }}</td>
-                    <td>{{ injObj.name }}</td>
-                    <td>{{ injObj.location }}</td>
-                    <td>{{ injObj.days }}</td>
-                    <td>{{ injObj.eraD }}</td>
-                    <td>{{ injObj.fastD }}</td>
-                    <td>{{ injObj.offseason }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
 </div>
+
+{% else %}
+<div class="unit-centered unit-80">
+
+{# HEADING #}
+<div class="units-row units-split results-section">
+    <div class="results-lead lead">
+        <h3>Results</h3>
+        <h4 style="font-weight:300">We found {{ results.total_cnt }} cases matching "{{ query_injury }}".
+        </h4>
+    </div>
+{# SUMMARY #}
+    <div class="units-row">
+        <div class="unit-50">
+            <div id="graph-labels" class="graph graph-small"></div>
+        </div>
+        <div class="unit-50 smaller">
+            <p> 
+                {% if results.stats.l0 %}
+                    {% if results.stats.l0single %}
+                    We only have <span class="green">1</span> case where the player recovered midseason with no re-injury in the same location, taking {{ results.stats.m0str }} days.
+                    {% else %}
+                    The <span class="green">{{ results.stats.l0 }}</span> cases where the player recovered midseason with no re-injury in the same location took an average of {{ results.stats.m0str }} days (standard deviation of {{ results.stats.s0str }}).
+                    {% endif %} 
+                {% else %} 
+                    We have no data where the player recovered midseason without re-injury. 
+                {% endif %} 
+                {% if results.stats.l2 %} 
+                    {% if results.stats.l2single %}
+                    We only have <span class="green">1</span> case where the player recovered off-season with no re-injury in the same location, taking {{ results.stats.m2str }} days. These off-season cases are generally longer and less informative for more urgent cases. 
+                    {% else %} 
+                        The <span class="green">{{ results.stats.l2 }}</span> cases where the player recovered off-season with no re-injury in the same location took an average of {{ results.stats.m2str }} days (standard deviation of {{ results.stats.s2str }}). These cases are generally longer and less informative for more urgent cases. 
+                    {% endif %}
+                {% else %} We have no data where the player recovered off-season without re-injury.
+                {% endif %}
+            </p>
+            <p>
+                {% if results.stats.total_reinj %} 
+                    Re-injuries occurred in {{ results.stats.total_reinj }} of these cases {% if results.stats.l1 %}, {{results.stats.l1}} of which happened mid-season. These cases took on average {{ results.stats.m1 }} days (standard devation of {{ results.stats.s1 }}).{% else %}, all of which involved off-season rehabilitation, suggesting that re-injury was not related to the amount of rest.{% endif %}
+                {% endif %}
+            </p>
+        </div>
+    </div>
+    <div class="units-row">
+        <p> 
+            {% if results.range.min %}
+                Using statistics such as the differences in ERA and fastball and the recurrence of the injury after a recovery case, we ranked our cases. Based on this data, we recommend a range of at least <span class='blue'>{{ results.range.min }} to {{ results.range.max }} days</span> for a mid-season recovery. {% if range.uncertain %} Our dataset for this particular injury is limited and most or all of these cases were less effective in improving or maintaining ERA or fastball improvements and avoiding re-injuries. Thus, this should be taken with a grain of salt.{% endif %}
+            {% else %}
+                We have insufficient data points to give a good prediction of recovery time.
+            {% endif %}
+        </p>
+    </div>
+</div>
+
+
+{# GRAPHS #}
+<div class="units-row units-split results-section">
+    <h4 class="results-section-title">ERA and Fastball Differences</h4> 
+    <div class="units-row units-split">
+        <div class="unit-50 figure">
+            <div id="graph_era" class="graph"></div>
+            <div class="unit-80 unit-centered">
+                <small><i> Earned mean average (ERA) - the average number of earned runs given up by a pitcher per game. Lower (negative) values are better.</i></small>
+            </div>
+        </div>
+        <div class="unit-50 figure">
+            <div id="graph_fastball" class="graph"></div>
+            <div class="unit-80 unit-centered">
+                <small><i> Fastball velocity - higher is better. Fastball and ERA are from http://www.fangraphs.com.</i></small>
+            </div>
+        </div>
+    </div>
+    <div class="unit-50 unit-centered figure-section">
+        <button id="figure-btn" class="width-100 btn btn-blue btn-outline"> Show only mid-season points </button>
+    </div>
+</div>
+
+<!--{# NICE CASES, PROCEDURES, LOCATIONS
+<div class="unit-row results-section">
+    <div class="unit-50">
+        <h4 results-section-title>Procedures</h4>
+    </div>
+    <div class="unit-50">
+        <h4 results-section-title>Locations</h4>
+    </div>
+</div> #}-->
+
+{% if results.high_cases %}
+<div class="units-row units-split results-section">
+    <h4 class="results-section-title">High-Ranked Injuries</h4>
+    <table class="injury-table table-stripped">
+        <thead>
+            <tr>
+                <th>Player Name</th>
+                <th>Team</th>
+                <th>Injury</th>
+                <th>Affected Area</th>
+                <th>Days</th>
+                <th>ERA</th>
+                <th>Fastball</th>
+                <th>Off-season</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for case in results.high_cases %}
+            <tr>
+                <td>{{ case.playerName }}</td>
+                <td>{{ case.playerTeam }}</td>
+                <td>{{ case.injury }}</td>
+                <td>{{ case.injury_loc }}</td>
+                <td>{{ case.days }}</td>
+                <td>{{ case.eraD }}</td>
+                <td>{{ case.fastD }}</td>
+                <td>{{ case.offseason }}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+{% endif %}
 
 {% endblock %}
 
-{% if results.injuries %}
+
+
+
+
+
+{# JAVASCRIPT #}
+
+{% if results %}
 {% block javascript %}
-<script> 
-    var plot_data = {{ results.plot_data }};    
-</script>
+<script>  
+var bar_data = {{ results.counts }};
+var plot_data = {{ results.plot_data }}; </script>
 <script src="{{ STATIC_URL }}/js/results.js" type="text/javascript"></script>
+
 {% endblock %}
 {% endif %}
 

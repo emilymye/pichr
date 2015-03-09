@@ -1,4 +1,6 @@
 $(function () {
+    // var bar_data defined in results.html
+    // var plot_data defined in results.html
     var labels = ["Mid-season, successful", "Mid-season, re-injured", "Off-season, successful", "Off-season, re-injured"];
     var colors = [ "#2c9f42", "#ffc800", "#2575ed", "#ef969d" ];
     var seriesERA = [];
@@ -87,6 +89,32 @@ $(function () {
         series: seriesFast
     });
 
+    $("#graph-labels").highcharts({
+        chart: { type: 'bar' },
+        title: {
+            text: 'Number of Recovery Cases Per Category',
+            style: 'fontSize: 14px'
+        },
+        legend: { enabled: false },
+        xAxis: { categories: labels , title: { text: null }},
+        yAxis: {
+            min: 0,
+            title: {
+                text: '# Of Cases'
+            }
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        series: [{
+            name: 'Number of Days',
+            data: bar_data
+        }]
+    })
 
     function toggle_series(selector, sidxs){
         var chart = $(selector).highcharts();
