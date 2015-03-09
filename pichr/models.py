@@ -11,6 +11,9 @@ class SCTMorphology(models.Model):
 
 
 class SCTBodyStructure(models.Model):
+    class Meta:
+        ordering = ['name']
+
     name = models.CharField(max_length=100)
     sctname = models.CharField(max_length=200)
     sctid = models.IntegerField(primary_key=True)
@@ -28,6 +31,10 @@ class SCTInjury(models.Model):
     name = models.CharField(max_length=100)
     finding_site = models.ForeignKey("SCTBodyStructure")
     morphology = models.ForeignKey("SCTMorphology")
+    class Meta:
+        ordering = ['name']
+    def __str__(self):
+        return self.name
 
 
 class SCTProcedure(models.Model):
@@ -66,25 +73,27 @@ class Recovery(models.Model):
     offseason = models.BooleanField(default=False)
     procedure = models.ForeignKey("SCTProcedure", null=True)
     
-    def rank(self):
-        rank = 1
-        if self.postERA - self.preERA < self.RANK_CUTOFFS["era"]:
-            rank+=1
-        if self.postFastball - self.preFastball > self.RANK_CUTOFFS["era"]:
-            rank+=1
-        if self.reinjury:
-            rank -= 2
-        if offseason:
-            rank -= 1
-
-        return min(rank, 0)
-
-
-class Injury(models.Model):
     sct_injury = models.ForeignKey("SCTInjury")
     player = models.ForeignKey("Player")
-    recovery = models.OneToOneField("Recovery")
 
-    def __str__(self):
-        return "%s for %s" % (self.sct_injury.name, self.player.name) 
+    def diffERA(self):
+        return self.postERA - self.preERA
 
+    def diffFastball(self):
+        return self.postFastball - self.preFastball
+
+    def labels(self):
+        label, weight = 0, 2
+        if self.postERA - self.preERA < self.RANK_CUTOFFS["era"]:
+            weight+=1
+        if self.postFastball - self.preFastball > self.RANK_CUTOFFS["era"]:
+            weight+=1
+
+        if self.reinjury:
+            label = 1
+            weight -= 1.5
+        if self.offseason:
+            label = 2 if not self.reinjury else 3
+            weight -= 0.5
+
+        return label, weight

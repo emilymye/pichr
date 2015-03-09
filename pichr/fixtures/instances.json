@@ -601,744 +601,16 @@
     },
     {
         "pk": 0,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1368,
-            "sct_injury": "202856007",
-            "recovery": 0
-        }
-    },
-    {
-        "pk": 1,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 10261,
-            "sct_injury": "202856007",
-            "recovery": 1
-        }
-    },
-    {
-        "pk": 2,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 6550,
-            "sct_injury": "202856007",
-            "recovery": 2
-        }
-    },
-    {
-        "pk": 3,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1933,
-            "sct_injury": "309464009",
-            "recovery": 3
-        }
-    },
-    {
-        "pk": 4,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 8476,
-            "sct_injury": "309464009",
-            "recovery": 4
-        }
-    },
-    {
-        "pk": 5,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 4538,
-            "sct_injury": "442130003",
-            "recovery": 5
-        }
-    },
-    {
-        "pk": 6,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 412,
-            "sct_injury": "298163003",
-            "recovery": 6
-        }
-    },
-    {
-        "pk": 7,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 8476,
-            "sct_injury": "298163003",
-            "recovery": 7
-        }
-    },
-    {
-        "pk": 8,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 11716,
-            "sct_injury": "298163003",
-            "recovery": 8
-        }
-    },
-    {
-        "pk": 9,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 2642,
-            "sct_injury": "298163003",
-            "recovery": 9
-        }
-    },
-    {
-        "pk": 10,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1886,
-            "sct_injury": "298163003",
-            "recovery": 10
-        }
-    },
-    {
-        "pk": 11,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 7558,
-            "sct_injury": "209429001",
-            "recovery": 11
-        }
-    },
-    {
-        "pk": 12,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 2061,
-            "sct_injury": "125596004",
-            "recovery": 12
-        }
-    },
-    {
-        "pk": 13,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 2660,
-            "sct_injury": "125596004",
-            "recovery": 13
-        }
-    },
-    {
-        "pk": 14,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1890,
-            "sct_injury": "125596004",
-            "recovery": 14
-        }
-    },
-    {
-        "pk": 15,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 9080,
-            "sct_injury": "125596004",
-            "recovery": 15
-        }
-    },
-    {
-        "pk": 16,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 2835,
-            "sct_injury": "125596004",
-            "recovery": 16
-        }
-    },
-    {
-        "pk": 17,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 6661,
-            "sct_injury": "442130003",
-            "recovery": 17
-        }
-    },
-    {
-        "pk": 18,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 5746,
-            "sct_injury": "442130003",
-            "recovery": 18
-        }
-    },
-    {
-        "pk": 19,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 4782,
-            "sct_injury": "331000119106",
-            "recovery": 19
-        }
-    },
-    {
-        "pk": 20,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 9489,
-            "sct_injury": "331000119106",
-            "recovery": 20
-        }
-    },
-    {
-        "pk": 21,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1259,
-            "sct_injury": "209429001",
-            "recovery": 21
-        }
-    },
-    {
-        "pk": 22,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1345,
-            "sct_injury": "209429001",
-            "recovery": 22
-        }
-    },
-    {
-        "pk": 23,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 8851,
-            "sct_injury": "209429001",
-            "recovery": 23
-        }
-    },
-    {
-        "pk": 24,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 6485,
-            "sct_injury": "209429001",
-            "recovery": 24
-        }
-    },
-    {
-        "pk": 25,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 4676,
-            "sct_injury": "209429001",
-            "recovery": 25
-        }
-    },
-    {
-        "pk": 26,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 10732,
-            "sct_injury": "209429001",
-            "recovery": 26
-        }
-    },
-    {
-        "pk": 27,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 2540,
-            "sct_injury": "209429001",
-            "recovery": 27
-        }
-    },
-    {
-        "pk": 28,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 5861,
-            "sct_injury": "209429001",
-            "recovery": 28
-        }
-    },
-    {
-        "pk": 29,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 6941,
-            "sct_injury": "209429001",
-            "recovery": 29
-        }
-    },
-    {
-        "pk": 30,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 6109,
-            "sct_injury": "209429001",
-            "recovery": 30
-        }
-    },
-    {
-        "pk": 31,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 2886,
-            "sct_injury": "209429001",
-            "recovery": 31
-        }
-    },
-    {
-        "pk": 32,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 4359,
-            "sct_injury": "209429001",
-            "recovery": 32
-        }
-    },
-    {
-        "pk": 33,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 14443,
-            "sct_injury": "209429001",
-            "recovery": 33
-        }
-    },
-    {
-        "pk": 34,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 6389,
-            "sct_injury": "209429001",
-            "recovery": 34
-        }
-    },
-    {
-        "pk": 35,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 18,
-            "sct_injury": "209429001",
-            "recovery": 35
-        }
-    },
-    {
-        "pk": 36,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 6176,
-            "sct_injury": "209429001",
-            "recovery": 36
-        }
-    },
-    {
-        "pk": 37,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1795,
-            "sct_injury": "209429001",
-            "recovery": 37
-        }
-    },
-    {
-        "pk": 38,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 521,
-            "sct_injury": "442265005",
-            "recovery": 38
-        }
-    },
-    {
-        "pk": 39,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 9033,
-            "sct_injury": "125597008",
-            "recovery": 39
-        }
-    },
-    {
-        "pk": 40,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 9918,
-            "sct_injury": "125597008",
-            "recovery": 40
-        }
-    },
-    {
-        "pk": 41,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1886,
-            "sct_injury": "125597008",
-            "recovery": 41
-        }
-    },
-    {
-        "pk": 42,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 9346,
-            "sct_injury": "609590004",
-            "recovery": 42
-        }
-    },
-    {
-        "pk": 43,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 5070,
-            "sct_injury": "442265005",
-            "recovery": 43
-        }
-    },
-    {
-        "pk": 44,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 14443,
-            "sct_injury": "442265005",
-            "recovery": 44
-        }
-    },
-    {
-        "pk": 45,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 9129,
-            "sct_injury": "442265005",
-            "recovery": 45
-        }
-    },
-    {
-        "pk": 46,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 2586,
-            "sct_injury": "125597008",
-            "recovery": 46
-        }
-    },
-    {
-        "pk": 47,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 4424,
-            "sct_injury": "4106009",
-            "recovery": 47
-        }
-    },
-    {
-        "pk": 48,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1937,
-            "sct_injury": "4106009",
-            "recovery": 48
-        }
-    },
-    {
-        "pk": 49,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1303,
-            "sct_injury": "202842005",
-            "recovery": 49
-        }
-    },
-    {
-        "pk": 50,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 8077,
-            "sct_injury": "239961006",
-            "recovery": 50
-        }
-    },
-    {
-        "pk": 51,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 8077,
-            "sct_injury": "239961006",
-            "recovery": 51
-        }
-    },
-    {
-        "pk": 52,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 10261,
-            "sct_injury": "443798008",
-            "recovery": 52
-        }
-    },
-    {
-        "pk": 53,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 10261,
-            "sct_injury": "443798008",
-            "recovery": 53
-        }
-    },
-    {
-        "pk": 54,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 4662,
-            "sct_injury": "443798008",
-            "recovery": 54
-        }
-    },
-    {
-        "pk": 55,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1757,
-            "sct_injury": "443798008",
-            "recovery": 55
-        }
-    },
-    {
-        "pk": 56,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 5669,
-            "sct_injury": "443798008",
-            "recovery": 56
-        }
-    },
-    {
-        "pk": 57,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 9325,
-            "sct_injury": "443798008",
-            "recovery": 57
-        }
-    },
-    {
-        "pk": 58,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 3271,
-            "sct_injury": "443798008",
-            "recovery": 58
-        }
-    },
-    {
-        "pk": 59,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 9132,
-            "sct_injury": "443798008",
-            "recovery": 59
-        }
-    },
-    {
-        "pk": 60,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1149,
-            "sct_injury": "443798008",
-            "recovery": 60
-        }
-    },
-    {
-        "pk": 61,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 8268,
-            "sct_injury": "443798008",
-            "recovery": 61
-        }
-    },
-    {
-        "pk": 62,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 11827,
-            "sct_injury": "443798008",
-            "recovery": 62
-        }
-    },
-    {
-        "pk": 63,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 8600,
-            "sct_injury": "125594001",
-            "recovery": 63
-        }
-    },
-    {
-        "pk": 64,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 4971,
-            "sct_injury": "443798008",
-            "recovery": 64
-        }
-    },
-    {
-        "pk": 65,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 833,
-            "sct_injury": "263122000",
-            "recovery": 65
-        }
-    },
-    {
-        "pk": 66,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 8137,
-            "sct_injury": "202842005",
-            "recovery": 66
-        }
-    },
-    {
-        "pk": 67,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 7106,
-            "sct_injury": "74779009",
-            "recovery": 67
-        }
-    },
-    {
-        "pk": 68,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 5213,
-            "sct_injury": "125594001",
-            "recovery": 68
-        }
-    },
-    {
-        "pk": 69,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 1701,
-            "sct_injury": "275334004",
-            "recovery": 69
-        }
-    },
-    {
-        "pk": 70,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 206,
-            "sct_injury": "275334004",
-            "recovery": 70
-        }
-    },
-    {
-        "pk": 71,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 3234,
-            "sct_injury": "275334004",
-            "recovery": 71
-        }
-    },
-    {
-        "pk": 72,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 13074,
-            "sct_injury": "275334004",
-            "recovery": 72
-        }
-    },
-    {
-        "pk": 73,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 7872,
-            "sct_injury": "269105005",
-            "recovery": 73
-        }
-    },
-    {
-        "pk": 74,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 4363,
-            "sct_injury": "202852009",
-            "recovery": 74
-        }
-    },
-    {
-        "pk": 75,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 6244,
-            "sct_injury": "202852009",
-            "recovery": 75
-        }
-    },
-    {
-        "pk": 76,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 6230,
-            "sct_injury": "202852009",
-            "recovery": 76
-        }
-    },
-    {
-        "pk": 77,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 4567,
-            "sct_injury": "202857003",
-            "recovery": 77
-        }
-    },
-    {
-        "pk": 78,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 6475,
-            "sct_injury": "428539005",
-            "recovery": 78
-        }
-    },
-    {
-        "pk": 79,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 4734,
-            "sct_injury": "428539005",
-            "recovery": 79
-        }
-    },
-    {
-        "pk": 80,
-        "model": "pichr.Injury",
-        "fields": {
-            "player": 3184,
-            "sct_injury": "428539005",
-            "recovery": 80
-        }
-    },
-    {
-        "pk": 0,
         "model": "pichr.Recovery",
         "fields": {
             "duration": "21",
             "postFastball": 93.2,
             "preERA": 1.46,
             "reinjury": true,
-            "offseason": false,
+            "player": 1368,
             "date": "2013-04-29",
             "preFastball": 94.7,
+            "sct_injury": "202856007",
             "postERA": 7.84
         }
     },
@@ -1350,9 +622,10 @@
             "postFastball": 93.4,
             "preERA": 3.79,
             "reinjury": true,
-            "offseason": false,
+            "player": 10261,
             "date": "2013-05-16",
             "preFastball": 93.1,
+            "sct_injury": "202856007",
             "postERA": 1.59
         }
     },
@@ -1363,10 +636,10 @@
             "duration": "88",
             "postFastball": 88.0,
             "preERA": 5.17,
-            "reinjury": false,
-            "offseason": false,
+            "player": 6550,
             "date": "2013-06-24",
             "preFastball": 91.5,
+            "sct_injury": "202856007",
             "postERA": 0.0
         }
     },
@@ -1375,12 +648,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "263",
+            "offseason": true,
             "postFastball": 92.1,
             "preERA": 5.56,
-            "reinjury": false,
-            "offseason": true,
+            "player": 1933,
             "date": "2012-12-18",
             "preFastball": 93.9,
+            "sct_injury": "309464009",
             "postERA": 4.26
         }
     },
@@ -1389,12 +663,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "228",
+            "offseason": true,
             "postFastball": 91.5,
             "preERA": 2.3,
-            "reinjury": false,
-            "offseason": true,
+            "player": 8476,
             "date": "2013-08-18",
             "preFastball": 92.2,
+            "sct_injury": "309464009",
             "postERA": 5.23
         }
     },
@@ -1405,10 +680,10 @@
             "duration": "38",
             "postFastball": 92.8,
             "preERA": 4.95,
-            "reinjury": false,
-            "offseason": false,
+            "player": 4538,
             "date": "2013-07-29",
             "preFastball": 92.5,
+            "sct_injury": "442130003",
             "postERA": 3.31
         }
     },
@@ -1419,10 +694,10 @@
             "duration": "36",
             "postFastball": 89.3,
             "preERA": 1.62,
-            "reinjury": false,
-            "offseason": false,
+            "player": 412,
             "date": "2013-05-09",
             "preFastball": 89.7,
+            "sct_injury": "298163003",
             "postERA": 4.04
         }
     },
@@ -1434,9 +709,10 @@
             "postFastball": 92.2,
             "preERA": 5.63,
             "reinjury": true,
-            "offseason": false,
+            "player": 8476,
             "date": "2013-03-31",
             "preFastball": 94.1,
+            "sct_injury": "298163003",
             "postERA": 2.3
         }
     },
@@ -1447,10 +723,10 @@
             "duration": "57",
             "postFastball": 91.4,
             "preERA": 7.42,
-            "reinjury": false,
-            "offseason": false,
+            "player": 11716,
             "date": "2013-07-06",
             "preFastball": 91.6,
+            "sct_injury": "298163003",
             "postERA": 4.7
         }
     },
@@ -1461,10 +737,10 @@
             "duration": "35",
             "postFastball": 91.8,
             "preERA": 4.91,
-            "reinjury": false,
-            "offseason": false,
+            "player": 2642,
             "date": "2013-05-14",
             "preFastball": 90.6,
+            "sct_injury": "298163003",
             "postERA": 0.0
         }
     },
@@ -1473,12 +749,14 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "307",
+            "offseason": true,
             "postFastball": 86.4,
             "preERA": 0.0,
             "reinjury": true,
-            "offseason": true,
+            "player": 1886,
             "date": "2013-05-27",
             "preFastball": 88.5,
+            "sct_injury": "298163003",
             "postERA": 13.5
         }
     },
@@ -1487,12 +765,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "365",
+            "offseason": true,
             "postFastball": 92.7,
             "preERA": 3.6,
-            "reinjury": false,
-            "offseason": true,
+            "player": 7558,
             "date": "2013-03-31",
             "preFastball": 94.2,
+            "sct_injury": "209429001",
             "postERA": 1.13
         }
     },
@@ -1501,12 +780,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "272",
+            "offseason": true,
             "postFastball": 90.2,
             "preERA": 2.79,
-            "reinjury": false,
-            "offseason": true,
+            "player": 2061,
             "date": "2013-08-08",
             "preFastball": 90.2,
+            "sct_injury": "125596004",
             "postERA": 2.38
         }
     },
@@ -1515,12 +795,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "198",
+            "offseason": true,
             "postFastball": 90.8,
             "preERA": 4.26,
-            "reinjury": false,
-            "offseason": true,
+            "player": 2660,
             "date": "2013-09-13",
             "preFastball": 90.9,
+            "sct_injury": "125596004",
             "postERA": 4.38
         }
     },
@@ -1532,9 +813,10 @@
             "postFastball": 91.7,
             "preERA": 1.99,
             "reinjury": true,
-            "offseason": false,
+            "player": 1890,
             "date": "2013-07-29",
             "preFastball": 92.7,
+            "sct_injury": "125596004",
             "postERA": 2.79
         }
     },
@@ -1543,12 +825,14 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "309",
+            "offseason": true,
             "postFastball": 87.9,
             "preERA": 18.9,
             "reinjury": true,
-            "offseason": true,
+            "player": 9080,
             "date": "2013-06-12",
             "preFastball": 90.7,
+            "sct_injury": "125596004",
             "postERA": 1.62
         }
     },
@@ -1559,10 +843,10 @@
             "duration": "36",
             "postFastball": 89.6,
             "preERA": 1.64,
-            "reinjury": false,
-            "offseason": false,
+            "player": 2835,
             "date": "2013-07-23",
             "preFastball": 90.6,
+            "sct_injury": "125596004",
             "postERA": 6.43
         }
     },
@@ -1571,12 +855,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "269",
+            "offseason": true,
             "postFastball": 93.9,
             "preERA": 2.25,
-            "reinjury": false,
-            "offseason": true,
+            "player": 6661,
             "date": "2013-08-30",
             "preFastball": 94.3,
+            "sct_injury": "442130003",
             "postERA": 2.79
         }
     },
@@ -1585,12 +870,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "412",
+            "offseason": true,
             "postFastball": 89.7,
             "preERA": 2.61,
-            "reinjury": false,
-            "offseason": true,
+            "player": 5746,
             "date": "2013-05-18",
             "preFastball": 90.0,
+            "sct_injury": "442130003",
             "postERA": 1.86
         }
     },
@@ -1601,10 +887,10 @@
             "duration": "16",
             "postFastball": 90.3,
             "preERA": 2.25,
-            "reinjury": false,
-            "offseason": false,
+            "player": 4782,
             "date": "2013-05-01",
             "preFastball": 92.1,
+            "sct_injury": "331000119106",
             "postERA": 5.73
         }
     },
@@ -1613,12 +899,14 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "400",
+            "offseason": true,
             "postFastball": 88.2,
             "preERA": 7.71,
             "reinjury": true,
-            "offseason": true,
+            "player": 9489,
             "date": "2013-06-03",
             "preFastball": 90.0,
+            "sct_injury": "331000119106",
             "postERA": 6.75
         }
     },
@@ -1627,12 +915,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "641",
+            "offseason": true,
             "postFastball": 88.5,
             "preERA": 3.6,
-            "reinjury": false,
-            "offseason": true,
+            "player": 1259,
             "date": "2012-07-27",
             "preFastball": 88.0,
+            "sct_injury": "209581003",
             "postERA": 4.99
         }
     },
@@ -1641,12 +930,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "415",
+            "offseason": true,
             "postFastball": 97.2,
             "preERA": 4.5,
-            "reinjury": false,
-            "offseason": true,
+            "player": 1345,
             "date": "2012-05-25",
             "preFastball": 95.7,
+            "sct_injury": "209581003",
             "postERA": 0.0
         }
     },
@@ -1655,12 +945,14 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "403",
+            "offseason": true,
             "postFastball": 90.1,
             "preERA": 2.5,
             "reinjury": true,
-            "offseason": true,
+            "player": 8851,
             "date": "2012-06-21",
             "preFastball": 91.1,
+            "sct_injury": "209581003",
             "postERA": 4.5
         }
     },
@@ -1669,12 +961,14 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "487",
+            "offseason": true,
             "postFastball": 92.6,
             "preERA": 9.0,
             "reinjury": true,
-            "offseason": true,
+            "player": 6485,
             "date": "2012-04-19",
             "preFastball": 90.7,
+            "sct_injury": "209581003",
             "postERA": 0.73
         }
     },
@@ -1683,12 +977,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "364",
+            "offseason": true,
             "postFastball": 93.7,
             "preERA": 4.91,
-            "reinjury": false,
-            "offseason": true,
+            "player": 4676,
             "date": "2012-06-14",
             "preFastball": 88.7,
+            "sct_injury": "209581003",
             "postERA": 3.19
         }
     },
@@ -1699,10 +994,10 @@
             "duration": "421",
             "postFastball": 91.9,
             "preERA": 3.77,
-            "reinjury": false,
-            "offseason": false,
+            "player": 10732,
             "date": "2012-06-15",
             "preFastball": 91.4,
+            "sct_injury": "209581003",
             "postERA": 3.82
         }
     },
@@ -1711,12 +1006,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "338",
+            "offseason": true,
             "postFastball": 86.8,
             "preERA": 5.74,
-            "reinjury": false,
-            "offseason": true,
+            "player": 2540,
             "date": "2012-07-24",
             "preFastball": 87.9,
+            "sct_injury": "209581003",
             "postERA": 23.63
         }
     },
@@ -1725,12 +1021,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "388",
+            "offseason": true,
             "postFastball": 94.5,
             "preERA": 2.3,
-            "reinjury": false,
-            "offseason": true,
+            "player": 5861,
             "date": "2013-05-07",
             "preFastball": 97.2,
+            "sct_injury": "209581003",
             "postERA": 2.79
         }
     },
@@ -1739,12 +1036,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "461",
+            "offseason": true,
             "postFastball": 90.2,
             "preERA": 4.63,
-            "reinjury": false,
-            "offseason": true,
+            "player": 6941,
             "date": "2012-04-02",
             "preFastball": 91.8,
+            "sct_injury": "209581003",
             "postERA": 3.86
         }
     },
@@ -1753,12 +1051,14 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "427",
+            "offseason": true,
             "postFastball": 91.7,
             "preERA": 4.55,
             "reinjury": true,
-            "offseason": true,
+            "player": 6109,
             "date": "2012-07-27",
             "preFastball": 89.8,
+            "sct_injury": "209581003",
             "postERA": 7.15
         }
     },
@@ -1767,12 +1067,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "595",
+            "offseason": true,
             "postFastball": 91.7,
             "preERA": 4.15,
-            "reinjury": false,
-            "offseason": true,
+            "player": 2886,
             "date": "2012-09-06",
             "preFastball": 94.2,
+            "sct_injury": "209581003",
             "postERA": 1.72
         }
     },
@@ -1781,12 +1082,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "381",
+            "offseason": true,
             "postFastball": 92.7,
             "preERA": 6.31,
-            "reinjury": false,
-            "offseason": true,
+            "player": 4359,
             "date": "2012-06-19",
             "preFastball": 91.9,
+            "sct_injury": "209581003",
             "postERA": 7.71
         }
     },
@@ -1795,12 +1097,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "436",
+            "offseason": true,
             "postFastball": 90.5,
             "preERA": 1.17,
-            "reinjury": false,
-            "offseason": true,
+            "player": 14443,
             "date": "2013-05-27",
             "preFastball": 92.7,
+            "sct_injury": "209581003",
             "postERA": 3.86
         }
     },
@@ -1809,12 +1112,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "413",
+            "offseason": true,
             "postFastball": 91.1,
             "preERA": 3.68,
-            "reinjury": false,
-            "offseason": true,
+            "player": 6389,
             "date": "2012-07-17",
             "preFastball": 92.4,
+            "sct_injury": "209581003",
             "postERA": 5.4
         }
     },
@@ -1823,12 +1127,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "395",
+            "offseason": true,
             "postFastball": 93.7,
             "preERA": 3.16,
-            "reinjury": false,
-            "offseason": true,
+            "player": 18,
             "date": "2012-08-01",
             "preFastball": 94.6,
+            "sct_injury": "209581003",
             "postERA": 0.0
         }
     },
@@ -1837,12 +1142,14 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "509",
+            "offseason": true,
             "postFastball": 88.5,
             "preERA": 6.0,
             "reinjury": true,
-            "offseason": true,
+            "player": 6176,
             "date": "2012-04-17",
             "preFastball": 90.1,
+            "sct_injury": "209581003",
             "postERA": 3.6
         }
     },
@@ -1854,9 +1161,10 @@
             "postFastball": 91.7,
             "preERA": 5.06,
             "reinjury": true,
-            "offseason": false,
+            "player": 1795,
             "date": "2013-05-08",
             "preFastball": 91.9,
+            "sct_injury": "209429001",
             "postERA": 1.04
         }
     },
@@ -1867,10 +1175,10 @@
             "duration": "42",
             "postFastball": 92.2,
             "preERA": 7.27,
-            "reinjury": false,
-            "offseason": false,
+            "player": 521,
             "date": "2013-07-23",
             "preFastball": 93.7,
+            "sct_injury": "442265005",
             "postERA": 4.7
         }
     },
@@ -1881,10 +1189,10 @@
             "duration": "23",
             "postFastball": 91.1,
             "preERA": 3.26,
-            "reinjury": false,
-            "offseason": false,
+            "player": 9033,
             "date": "2013-06-03",
             "preFastball": 90.7,
+            "sct_injury": "125597008",
             "postERA": 0.77
         }
     },
@@ -1893,12 +1201,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "246",
+            "offseason": true,
             "postFastball": 88.8,
             "preERA": 4.5,
-            "reinjury": false,
-            "offseason": true,
+            "player": 9918,
             "date": "2013-07-27",
             "preFastball": 89.9,
+            "sct_injury": "125597008",
             "postERA": 5.4
         }
     },
@@ -1910,9 +1219,10 @@
             "postFastball": 88.5,
             "preERA": 1.04,
             "reinjury": true,
-            "offseason": false,
+            "player": 1886,
             "date": "2013-04-27",
             "preFastball": 88.1,
+            "sct_injury": "125597008",
             "postERA": 0.0
         }
     },
@@ -1921,12 +1231,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "302",
+            "offseason": true,
             "postFastball": 93.3,
             "preERA": 6.14,
-            "reinjury": false,
-            "offseason": true,
+            "player": 9346,
             "date": "2013-06-01",
             "preFastball": 93.5,
+            "sct_injury": "609590004",
             "postERA": 6.04
         }
     },
@@ -1938,9 +1249,10 @@
             "postFastball": 92.5,
             "preERA": 0.0,
             "reinjury": true,
-            "offseason": false,
+            "player": 5070,
             "date": "2013-04-04",
             "preFastball": 93.5,
+            "sct_injury": "442265005",
             "postERA": 4.66
         }
     },
@@ -1952,9 +1264,10 @@
             "postFastball": 92.7,
             "preERA": 12.46,
             "reinjury": true,
-            "offseason": false,
+            "player": 14443,
             "date": "2013-04-13",
             "preFastball": 91.5,
+            "sct_injury": "442265005",
             "postERA": 1.17
         }
     },
@@ -1965,10 +1278,10 @@
             "duration": "32",
             "postFastball": 91.2,
             "preERA": 6.57,
-            "reinjury": false,
-            "offseason": false,
+            "player": 9129,
             "date": "2013-06-21",
             "preFastball": 89.0,
+            "sct_injury": "442265005",
             "postERA": 6.75
         }
     },
@@ -1977,12 +1290,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "300",
+            "offseason": true,
             "postFastball": 88.4,
             "preERA": 3.38,
-            "reinjury": false,
-            "offseason": true,
+            "player": 2586,
             "date": "2013-06-06",
             "preFastball": 89.3,
+            "sct_injury": "125597008",
             "postERA": 6.84
         }
     },
@@ -1994,9 +1308,10 @@
             "postFastball": 90.5,
             "preERA": 2.51,
             "reinjury": true,
-            "offseason": false,
+            "player": 4424,
             "date": "2013-06-21",
             "preFastball": 90.1,
+            "sct_injury": "4106009",
             "postERA": 3.13
         }
     },
@@ -2005,12 +1320,14 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "301",
+            "offseason": true,
             "postFastball": 89.8,
             "preERA": 5.73,
             "reinjury": true,
-            "offseason": true,
+            "player": 1937,
             "date": "2013-06-20",
             "preFastball": 90.3,
+            "sct_injury": "4106009",
             "postERA": 3.27
         }
     },
@@ -2022,9 +1339,10 @@
             "postFastball": 87.0,
             "preERA": 8.65,
             "reinjury": true,
-            "offseason": false,
+            "player": 1303,
             "date": "2013-05-06",
             "preFastball": 89.7,
+            "sct_injury": "202842005",
             "postERA": 4.55
         }
     },
@@ -2036,9 +1354,10 @@
             "postFastball": 89.4,
             "preERA": 7.71,
             "reinjury": true,
-            "offseason": false,
+            "player": 8077,
             "date": "2013-04-27",
             "preFastball": 89.7,
+            "sct_injury": "239961006",
             "postERA": 2.2
         }
     },
@@ -2050,9 +1369,10 @@
             "postFastball": 89.0,
             "preERA": 2.2,
             "reinjury": true,
-            "offseason": false,
+            "player": 8077,
             "date": "2013-07-07",
             "preFastball": 89.4,
+            "sct_injury": "239961006",
             "postERA": 7.11
         }
     },
@@ -2064,9 +1384,10 @@
             "postFastball": 93.3,
             "preERA": 1.59,
             "reinjury": true,
-            "offseason": false,
+            "player": 10261,
             "date": "2013-06-07",
             "preFastball": 93.4,
+            "sct_injury": "443798008",
             "postERA": 4.68
         }
     },
@@ -2078,9 +1399,10 @@
             "postFastball": 94.7,
             "preERA": 4.68,
             "reinjury": true,
-            "offseason": false,
+            "player": 10261,
             "date": "2013-08-14",
             "preFastball": 93.3,
+            "sct_injury": "443798008",
             "postERA": 1.88
         }
     },
@@ -2091,10 +1413,10 @@
             "duration": "65",
             "postFastball": 90.3,
             "preERA": 4.0,
-            "reinjury": false,
-            "offseason": false,
+            "player": 4662,
             "date": "2013-05-31",
             "preFastball": 91.5,
+            "sct_injury": "443798008",
             "postERA": 4.84
         }
     },
@@ -2105,10 +1427,10 @@
             "duration": "15",
             "postFastball": 88.7,
             "preERA": 7.85,
-            "reinjury": false,
-            "offseason": false,
+            "player": 1757,
             "date": "2013-06-23",
             "preFastball": 88.9,
+            "sct_injury": "443798008",
             "postERA": 2.43
         }
     },
@@ -2120,9 +1442,10 @@
             "postFastball": 92.6,
             "preERA": 4.91,
             "reinjury": true,
-            "offseason": false,
+            "player": 5669,
             "date": "2013-03-31",
             "preFastball": 92.7,
+            "sct_injury": "443798008",
             "postERA": 2.8
         }
     },
@@ -2133,10 +1456,10 @@
             "duration": "55",
             "postFastball": 91.7,
             "preERA": 4.96,
-            "reinjury": false,
-            "offseason": false,
+            "player": 9325,
             "date": "2013-06-08",
             "preFastball": 92.0,
+            "sct_injury": "443798008",
             "postERA": 3.48
         }
     },
@@ -2147,10 +1470,10 @@
             "duration": "17",
             "postFastball": 96.3,
             "preERA": 5.4,
-            "reinjury": false,
-            "offseason": false,
+            "player": 3271,
             "date": "2013-05-12",
             "preFastball": 94.5,
+            "sct_injury": "443798008",
             "postERA": 0.63
         }
     },
@@ -2161,10 +1484,10 @@
             "duration": "84",
             "postFastball": 96.1,
             "preERA": 3.75,
-            "reinjury": false,
-            "offseason": false,
+            "player": 9132,
             "date": "2013-03-24",
             "preFastball": 94.2,
+            "sct_injury": "443798008",
             "postERA": 4.15
         }
     },
@@ -2175,10 +1498,10 @@
             "duration": "98",
             "postFastball": 89.1,
             "preERA": 4.3,
-            "reinjury": false,
-            "offseason": false,
+            "player": 1149,
             "date": "2013-06-10",
             "preFastball": 91.1,
+            "sct_injury": "443798008",
             "postERA": 0.0
         }
     },
@@ -2189,10 +1512,10 @@
             "duration": "19",
             "postFastball": 92.7,
             "preERA": 1.93,
-            "reinjury": false,
-            "offseason": false,
+            "player": 8268,
             "date": "2013-08-01",
             "preFastball": 92.9,
+            "sct_injury": "443798008",
             "postERA": 5.13
         }
     },
@@ -2203,10 +1526,10 @@
             "duration": "29",
             "postFastball": 93.9,
             "preERA": 7.59,
-            "reinjury": false,
-            "offseason": false,
+            "player": 11827,
             "date": "2013-08-03",
             "preFastball": 93.7,
+            "sct_injury": "443798008",
             "postERA": 5.0
         }
     },
@@ -2217,10 +1540,10 @@
             "duration": "69",
             "postFastball": 94.5,
             "preERA": 6.43,
-            "reinjury": false,
-            "offseason": false,
+            "player": 8600,
             "date": "2013-03-31",
             "preFastball": 92.9,
+            "sct_injury": "125594001",
             "postERA": 1.93
         }
     },
@@ -2232,9 +1555,10 @@
             "postFastball": 90.3,
             "preERA": 2.89,
             "reinjury": true,
-            "offseason": false,
+            "player": 4971,
             "date": "2013-05-22",
             "preFastball": 90.2,
+            "sct_injury": "443798008",
             "postERA": 7.94
         }
     },
@@ -2243,12 +1567,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "215",
+            "offseason": true,
             "postFastball": 87.4,
             "preERA": 3.14,
-            "reinjury": false,
-            "offseason": true,
+            "player": 833,
             "date": "2012-09-21",
             "preFastball": 87.5,
+            "sct_injury": "263122000",
             "postERA": 4.26
         }
     },
@@ -2257,12 +1582,14 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "365",
+            "offseason": true,
             "postFastball": 90.4,
             "preERA": 3.77,
             "reinjury": true,
-            "offseason": true,
+            "player": 8137,
             "date": "2013-05-18",
             "preFastball": 88.5,
+            "sct_injury": "202842005",
             "postERA": 4.12
         }
     },
@@ -2271,12 +1598,14 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "244",
+            "offseason": true,
             "postFastball": 90.5,
             "preERA": 3.82,
             "reinjury": true,
-            "offseason": true,
+            "player": 7106,
             "date": "2013-07-29",
             "preFastball": 91.3,
+            "sct_injury": "74779009",
             "postERA": 9.0
         }
     },
@@ -2287,10 +1616,10 @@
             "duration": "31",
             "postFastball": 92.2,
             "preERA": 6.52,
-            "reinjury": false,
-            "offseason": false,
+            "player": 5213,
             "date": "2013-05-27",
             "preFastball": 92.9,
+            "sct_injury": "125594001",
             "postERA": 0.6
         }
     },
@@ -2301,10 +1630,10 @@
             "duration": "20",
             "postFastball": 88.1,
             "preERA": 5.93,
-            "reinjury": false,
-            "offseason": false,
+            "player": 1701,
             "date": "2013-05-30",
             "preFastball": 88.2,
+            "sct_injury": "275334004",
             "postERA": 4.55
         }
     },
@@ -2315,10 +1644,10 @@
             "duration": "22",
             "postFastball": 87.4,
             "preERA": 2.25,
-            "reinjury": false,
-            "offseason": false,
+            "player": 206,
             "date": "2013-05-19",
             "preFastball": 87.2,
+            "sct_injury": "275334004",
             "postERA": 3.6
         }
     },
@@ -2329,10 +1658,10 @@
             "duration": "15",
             "postFastball": 90.7,
             "preERA": 6.38,
-            "reinjury": false,
-            "offseason": false,
+            "player": 3234,
             "date": "2013-04-05",
             "preFastball": 90.6,
+            "sct_injury": "275334004",
             "postERA": 6.39
         }
     },
@@ -2343,10 +1672,10 @@
             "duration": "15",
             "postFastball": 93.6,
             "preERA": 3.55,
-            "reinjury": false,
-            "offseason": false,
+            "player": 13074,
             "date": "2013-07-07",
             "preFastball": 93.1,
+            "sct_injury": "275334004",
             "postERA": 1.73
         }
     },
@@ -2358,9 +1687,10 @@
             "postFastball": 93.3,
             "preERA": 3.86,
             "reinjury": true,
-            "offseason": false,
+            "player": 7872,
             "date": "2013-04-18",
             "preFastball": 92.5,
+            "sct_injury": "269105005",
             "postERA": 2.21
         }
     },
@@ -2372,9 +1702,10 @@
             "postFastball": 89.5,
             "preERA": 0.0,
             "reinjury": true,
-            "offseason": false,
+            "player": 4363,
             "date": "2013-03-31",
             "preFastball": 91.0,
+            "sct_injury": "202852009",
             "postERA": 2.3
         }
     },
@@ -2386,9 +1717,10 @@
             "postFastball": 90.8,
             "preERA": 2.03,
             "reinjury": true,
-            "offseason": false,
+            "player": 6244,
             "date": "2013-05-08",
             "preFastball": 90.6,
+            "sct_injury": "202852009",
             "postERA": 2.81
         }
     },
@@ -2397,12 +1729,13 @@
         "model": "pichr.Recovery",
         "fields": {
             "duration": "197",
+            "offseason": true,
             "postFastball": 89.4,
             "preERA": 5.97,
-            "reinjury": false,
-            "offseason": true,
+            "player": 6230,
             "date": "2013-09-14",
             "preFastball": 89.2,
+            "sct_injury": "202852009",
             "postERA": 3.58
         }
     },
@@ -2414,9 +1747,10 @@
             "postFastball": 92.9,
             "preERA": 6.86,
             "reinjury": true,
-            "offseason": false,
+            "player": 4567,
             "date": "2013-04-29",
             "preFastball": 93.0,
+            "sct_injury": "202857003",
             "postERA": 3.74
         }
     },
@@ -2427,10 +1761,10 @@
             "duration": "44",
             "postFastball": 95.5,
             "preERA": 9.82,
-            "reinjury": false,
-            "offseason": false,
+            "player": 6475,
             "date": "2013-04-12",
             "preFastball": 96.5,
+            "sct_injury": "428539005",
             "postERA": 3.46
         }
     },
@@ -2442,9 +1776,10 @@
             "postFastball": 94.2,
             "preERA": 2.08,
             "reinjury": true,
-            "offseason": false,
+            "player": 4734,
             "date": "2013-04-14",
             "preFastball": 94.4,
+            "sct_injury": "428539005",
             "postERA": 2.25
         }
     },
@@ -2455,10 +1790,10 @@
             "duration": "47",
             "postFastball": 94.0,
             "preERA": 4.97,
-            "reinjury": false,
-            "offseason": false,
+            "player": 3184,
             "date": "2013-05-16",
             "preFastball": 92.9,
+            "sct_injury": "428539005",
             "postERA": 1.57
         }
     }

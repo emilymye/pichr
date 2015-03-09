@@ -23,12 +23,9 @@ For best results, make sure you have at least:
     cd pichr/                                     # changes directory to project after initial git clone
     python manage.py syncdb                       # sets up django database
     python manage.py migrate pichr                # migrates any south migrations
-    python manage.py loaddata types.json
-    python manage.py loaddata locations.json
-    python manage.py loaddata players.json
-    python manage.py loaddata procedures.json
-    python manage.py loaddata injuries.json
-    
+    python manage.py loaddata SCTInfo.json
+    python manage.py loaddata instances.json
+
 Application will be running at [http://localhost:8000](http://localhost:8000) after running one of the two commands:
 
     python manage.py runserver                                        # Normal way

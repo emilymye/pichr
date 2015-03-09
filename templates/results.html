@@ -1,51 +1,120 @@
 {% extends "base.html" %}
 
-{% block title %}{{ title }}{% endblock %}
-
 {% block content %}
 
-{% for error in form.errors %}
-  <span class="help-inline">{{ error }}</span>
-{% endfor %}
-
 <div id="results" class="units-container results-container">
-  <div class="units-row unit-80 unit-centered units-split">
-    <div class="unit-100 lead">
-      <h2>Results</h2>
-      <p>{{ results.summary }}
-    </div>
-    <div class="unit-50">
-      <h3>Injuries</h3>
-      {% for inj in results.injuries %}
-        <div class="units-30">
-          {{ inj.player.name }}
+{% if not results.injuries %}
+    <div class="units-row unit-centered unit-80"  style="padding:20px 0">
+        <div class="results-lead lead">
+            <h3>Results</h3>
+            <h4 style="font-weight:300">"{{ query_injury }}"</h4>
         </div>
-          {{ inj.recovery.duration }}
-          {{ inj.recovery.reinjury }}
-          {{ inj.recovery.offseason }}
-          {{ inj.name }}
-      {% endfor%}
+        <div>
+            <p>No injuries of this type are in our dataset - sorry!</p>
+            <a href="/search" class="btn btn-blue unit-40 unit-centered">New Search</a>
+        </div>
+        
     </div>
-    <div class="unit-50">
-      <h3>Graphs</h3>
-      <div class="units-row end">
-        <div id="graph_era" class="graph"></div>
-      <div class="units-row end">
-        <div id="graph_fastball" class="graph"></div>
-      </div>
+{% else %}
+    <div class="units-row">
+        <div class="units-row unit-80 unit-centered results-lead lead">
+            <h3>Results</h3>
+            <h4 style="font-weight:300">We found {{ results.totalcnt }} cases matching "{{ query_injury }}".</h4>
+        </div>
+        <div class="units-row unit-80 results-section unit-centered">
+            <p>
+                {% if results.cnt %}
+                    {{ results.cnt }} were <span class="green">mid-season recoveries with no injuries</span>, averaging around {{ results.mean }} days of recovery with a standard deviation of  {{ results.variance }}.
+                {% endif %}
+
+                {% if results.cntOff %}
+                    {{results.cntOff}} were off-season recoveries with no injuries, averaging around {{ results.meanOff }} days of recovery with a standard deviation of {{ results.varianceOff }}.
+                {% endif %}
+
+                {% if results.cntRe %}
+                    {{ results.cntReTotal }} cases had re-injuries, {{results.cntRe }} of which were mid-season recoveries. 
+                {% else %}
+                {% endif %}   
+            </p>
+            <p>
+                We suggest that the recovery period should have a general recovery length of <span class="blue">{{ results.min }} to {{results.max}} days</span>.<br/><br/>
+            </p>
+
+        </div>
+
+
+        <div class="units-row unit-80 results-section unit-centered units-split">
+            <div class="unit-row">
+                <div class="figure unit-50">
+                    <div id="graph_era" class="graph"></div>
+                    <div class="unit-80 unit-centered">
+                        <small><i>
+                        Earned mean average (ERA) - the average number of earned runs given up by a pitcher per game. Lower (negative) values are better.
+                         </i></small>
+                    </div>
+                </div>
+                <div class="figure unit-50">
+                    <div id="graph_fastball" class="graph"></div>
+                    <div class="unit-80 unit-centered">
+                        <small><i>
+                        Fastball velocity - higher is better. Fastball and ERA are from http://www.fangraphs.com.
+                         </i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="unit-row">
+                <div class="unit-40 unit-centered" style="padding:10px 0 20px">
+                    <button id="figure-btn" class="width-100 btn btn-blue btn-outline">
+                        Show only mid-season points
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    <div class="unit-row unit-80 unit-centered results-section injuries-list">
+        <h3>Excellent Recovery Cases</h3>
+        <div class="unit-100">
+        <table class="injury-table table-stripped">
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Team</th>
+                    <th>Injury</th>
+                    <th>Affected Area</th>
+                    <th>Days</th>
+                    <th>ERA</th>
+                    <th>Fastball</th>
+                    <th>Off-season</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for injObj in results.injuries %}
+                <tr>
+                    <td>{{ injObj.playerName }}</td>
+                    <td>{{ injObj.playerTeam }}</td>
+                    <td>{{ injObj.name }}</td>
+                    <td>{{ injObj.location }}</td>
+                    <td>{{ injObj.days }}</td>
+                    <td>{{ injObj.eraD }}</td>
+                    <td>{{ injObj.fastD }}</td>
+                    <td>{{ injObj.offseason }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
+    {% endif %}
 </div>
 
+{% endblock %}
 
+{% if results.injuries %}
 {% block javascript %}
-  <script>
-    $(function(){
-      var erapts = {{ results.era_pts }};
-      var fastballpts = {{ results.fastball_pts }}
-      // plot
-    });
-  </script>
-
+<script> 
+    var plot_data = {{ results.plot_data }};    
+</script>
+<script src="{{ STATIC_URL }}/js/results.js" type="text/javascript"></script>
 {% endblock %}
+{% endif %}
 
-{% endblock %}
+

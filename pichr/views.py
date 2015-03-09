@@ -4,44 +4,54 @@ from django import forms
 
 from pichr.models import *
 from pichr.forms import *
-from pichr.solver import analyze
+from pichr.analysis import analyze
 
 def index(request):
     return search(request)
 
-def search(request):
 
-    payload = {
-        'title': 'Search PICHR'
-    }
+def search(request):
+    payload = { }
     if request.method == "POST":
         form = SearchForm(request.POST)
 
         if form.is_valid():
-            # injuries = Injury.objects.filter(location)
-            type_f = [o.pk for o in InjuryType.objects.all()]
-            loc_f = [l.pk for l in InjuryLocation.objects.all()]
+
             filters = form.cleaned_data
+            injuries = []
 
-            q_text = ""
-            if filters["injury_type"] != None and filters["injury_type"].sctid != 19130008:
-                tpe = filters["injury_type"]
+            query = ""
+            
+            if filters["injury"] is not None:
+                inj = filters["injury"]
+                injuries = list(Recovery.objects.filter(sct_injury_id=inj.sctid))
+                query = inj.name
+            else:
+                type_f = [o.pk for o in SCTMorphology.objects.all()]
+                loc_f = [l.pk for l in SCTBodyStructure.objects.all()]
 
-                type_f = [tpe.sctid]
-                q_text = " with type %s" % tpe.name
+                query = "general injury"
 
-            if filters["location"] != None:
-                loc = filters["location"]
-                q_text += " affecting the %s" % loc.name.lower()
-                loc_f = [desc['sctid'] for desc in loc.descendants.all().values("sctid").distinct()]
-                loc_f.append(loc.sctid)
+                if filters["injury_type"] is not None and \
+                   filters["injury_type"].sctid != 19130008:
+                    tpe = filters["injury_type"]
+                    type_f = [tpe.sctid]
+                    query = "%s" % tpe.name.lower()
 
-            injuries = list(Injury.objects.filter(
-                injury_location__sctid__in=loc_f,
-                injury_type__sctid__in=type_f
-            ))
+                if filters["location"] is not None:
+                    loc = filters["location"]
+                    query += " of %s" % loc.sctname.lower()
+                    loc_f = [desc['sctid'] for desc in loc.descendants.all().values("sctid").distinct()]
+                    loc_f.append(loc.sctid)
 
-            payload["results"] = analyze(injuries, q_text)
+                injuries = list(Recovery.objects.filter(
+                    sct_injury__finding_site__sctid__in=loc_f,
+                    sct_injury__morphology__sctid__in=type_f
+                ))
+
+            payload["query_injury"] = query.lower()
+            payload["results"] = analyze(injuries, query)
+
             return render(request, "results.html", payload)
         
     else:

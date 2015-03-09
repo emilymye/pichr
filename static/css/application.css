@@ -1,5 +1,27 @@
+.back-pastel-blue{
+  background-color: #d3e3fb
+}
+
+.back-gray{
+  background-color: #e0e3e5
+}
+
+.green{
+  color:#2c9f42;
+}
+
+.blue{
+  color:#2575ed;
+}
+
+.filter-container{
+  padding: 20px 70px;
+  background-color: #d3e3fb;
+  border-radius: 8px;
+}
+
 .search-container{
-  margin-top:100px;
+  margin-top:50px;
   height:400px;
 }
 
@@ -24,7 +46,37 @@
   margin-top:40px;
 }
 
+.results-container .injuries-list{
+  height:400px;
+  overflow-y: scroll;
+}
+
 .graph{
-  width:300px;
-  height:200px;
+  width:100%;
+  height:350px;
+}
+
+.results-container a.btn{
+  margin-top:20px;
+}
+
+.results-container .results-section{
+  margin: 10px 0 30px;
+  border-bottom:1px solid #e2e2e2;
+  padding:30px;
+}
+
+.results-container .figure{
+  text-align:center;
+  margin:10px 0 30px;
+}
+
+.results-container .figure small{
+  font-weight:300;
+  font-size:9pt;
+}
+
+.injury-table{
+  font-weight:300;
+  font-size:9pt;
 }

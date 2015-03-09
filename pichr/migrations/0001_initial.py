@@ -11,15 +11,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Injury',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-            ],
-            options={
-            },
-            bases=(models.Model,),
-        ),
-        migrations.CreateModel(
             name='Player',
             fields=[
                 ('name', models.CharField(max_length=200)),
@@ -42,6 +33,7 @@ class Migration(migrations.Migration):
                 ('postFastball', models.FloatField()),
                 ('reinjury', models.BooleanField(default=False)),
                 ('offseason', models.BooleanField(default=False)),
+                ('player', models.ForeignKey(to='pichr.Player')),
             ],
             options={
             },
@@ -58,6 +50,7 @@ class Migration(migrations.Migration):
                 ('descendants', models.ManyToManyField(related_name='ancestors', to='pichr.SCTBodyStructure')),
             ],
             options={
+                'ordering': ['name'],
             },
             bases=(models.Model,),
         ),
@@ -69,6 +62,7 @@ class Migration(migrations.Migration):
                 ('finding_site', models.ForeignKey(to='pichr.SCTBodyStructure')),
             ],
             options={
+                'ordering': ['name'],
             },
             bases=(models.Model,),
         ),
@@ -107,19 +101,7 @@ class Migration(migrations.Migration):
             preserve_default=True,
         ),
         migrations.AddField(
-            model_name='injury',
-            name='player',
-            field=models.ForeignKey(to='pichr.Player'),
-            preserve_default=True,
-        ),
-        migrations.AddField(
-            model_name='injury',
-            name='recovery',
-            field=models.OneToOneField(to='pichr.Recovery'),
-            preserve_default=True,
-        ),
-        migrations.AddField(
-            model_name='injury',
+            model_name='recovery',
             name='sct_injury',
             field=models.ForeignKey(to='pichr.SCTInjury'),
             preserve_default=True,
