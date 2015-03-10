@@ -92,7 +92,7 @@ def predict_range(days, high_cases, label_stats):
     prange = [0,1000]
 
     if len(days) == 1: 
-        return rng
+        return rng, high_cases
 
     mean_d, std_d = days.mean(), days.std()
     bounds = (mean_d - 2*std_d, mean_d + 2 * std_d)
