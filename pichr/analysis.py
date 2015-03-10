@@ -19,11 +19,13 @@ def plot_information(labels, allERA, allFast, allDays):
             fasts.append([])
             pt_lists.append([[], []])
         else:
-            dayl, eral, fastl = allDays[idx], allERA[idx], allFast[idx]
+            dayl, eral, fastl = allDays[idx].tolist(), allERA[idx].tolist(), allFast[idx].tolist()
             days.append([dayl])
             eras.append([eral])
             fasts.append([fastl])
             pt_lists.append([ zip(dayl, eral), zip(dayl, fastl) ])
+
+
 
     return days, eras, fasts, pt_lists
 
@@ -168,7 +170,7 @@ def analyze(cases):
     high_case_data = get_high_rank_cases(cases_meta)               # High-ranked case data
 
     prange, high_cases = predict_range(durations, high_case_data, stats)                   # Predicted range of days
-
+    
     return {
         "total_cnt": len(cases),
         "high_cases": high_cases,
