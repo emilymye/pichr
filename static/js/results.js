@@ -111,7 +111,7 @@ $(function () {
             }
         },
         series: [{
-            name: 'Number of Days',
+            name: 'Number of Cases',
             data: bar_data
         }]
     })
